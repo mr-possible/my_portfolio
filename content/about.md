@@ -1,3 +1,7 @@
++++ 
+title = "About Me"
++++
+
 ## Summary
 
 I am a passionate and detail-oriented Software Engineer with a specialization in Test Automation. With a keen interest in ensuring software quality and delivering robust solutions, I bring a unique blend of technical skills and a quality-focused mindset.
