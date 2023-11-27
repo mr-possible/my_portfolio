@@ -1,0 +1,28 @@
+# Hugo
+/resources/_gen
+/resources/_gen/images
+/resources/_gen/assets
+/public/
+/resources/
+/themes/*/exampleSite/
+*.log
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Editor-specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.suo
+*.user
+*.sln.docstates
+
+# Dependency directories (remove these if you are not using these tools)
+/node_modules/
+/vendor/
