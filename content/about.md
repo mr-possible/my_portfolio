@@ -1,14 +1,13 @@
 +++ 
 title = "About Me"
 +++
-
 ## Summary
 
-I am a passionate and detail-oriented Software Engineer with a specialization in Test Automation. With a keen interest in ensuring software quality and delivering robust solutions, I bring a unique blend of technical skills and a quality-focused mindset.
+I am a passionate and detail-oriented Software Engineer from India. With a keen interest in ensuring software quality and delivering robust solutions, I bring a unique blend of technical skills and a quality-focused mindset. I am aiming for full-time roles in either United Kingdom, Northern Ireland, Europe and USA starting from January 2024. Please scroll down to know more 😀.
 
 ---
 
-## Education
+## Education 📚
 
 ### 2023 - Exp 2024 
 **University:** Swansea University  
@@ -23,7 +22,7 @@ I am a passionate and detail-oriented Software Engineer with a specialization in
 **Grade:** 8.65 out of 10
 
 ---
-## Professional Experience
+## Professional Experience 🕵🏼‍♂️
 
 ### Student Teaching Assistant
 
@@ -62,32 +61,42 @@ TODO
 TODO
 
 ---
-## Technical Skills
+## Technical Skills 🧰
 
-- **Programming Languages:** Java, Python
-- **Testing Frameworks:** TestNG, Selenium
-- **Web Technologies:** HTML, JavaScript
-- **Version Control:** Git
-- **CI/CD:** Jenkins, Docker
-- **API Testing:** Postman, REST Assured
+- **Programming Languages:** Java, Python.
+- **Backend:** Spring Boot, Django, NodeJS.
+- **Frontend:** HTML, JavaScript, React.
+- **CI/CD:** Jenkins, Github Actions, Docker.
+- **Testing:** Postman, TestNG, Selenium Webdriver, REST-Assured.
 - **Databases:** MySQL
+- **Version Control:** Git
+- **Other:** Apache Maven, Poetry, MS Azure, AWS (not an expert).
 
 ---
-## Hobbies
 
-Cooking, Cleaning, Travelling
-
----
-## Extracurricular Activities/ Volunteership
-
-I actively participate in community meetups and tech conferences, where I engage with fellow professionals and stay updated on the latest industry trends. Additionally, I volunteer for coding workshops aimed at introducing programming to students.
-
----
-## Misc Information
-
-<!-- - **Certifications:** ISTQB Foundation Level -->
+## Misc Information 🙅🏼‍♂️
 - **Languages:** English (Business-fluent), Hindi (Mother-tongue)
 - **Marital Status:** Single
 - **Current Location:** Swansea, Wales, United Kingdom
 - **VISA status:** Student Visa (expiring in Mar 2024)
 - **Require visa sponsorship to work full time:** Yes
+
+---
+## Extracurricular Activities/ Volunteership 🥷🏼
+
+1. **Smart India Hackathon**  --- **2017**
+    - First nationwide hackathon organised by Govt of India.
+    - Our head of department (during my bachelors) selected me and one friend of mine from the entire class to join a team of 3 seniors for this hackathon.
+    - Our team made a Django project titled 'Petrol Pump Locator' which could be used by people to locate nearby petrol pumps around their location.
+    - Me and my friend worked on the frontend part of the project while others worked on the backend. But we did tinker around with Django's configuration.
+    - Honestly, it was a thrilling experience where interest for application programming grew for me.
+    - Having said that, it was a bit overwhelming too, since we were not that good at coding at that point of time, but we did get alot of exposure.
+
+2. **Code Club Member, SSEC**  --- **2019**
+    - SSEC is short for my college - Shri Shankaracharya Engineering College, Bhilai.
+    - I got my hands dirty on C/C++ mentorship being a final year student in my college. Helped juniors in campus placement as well.
+
+---
+## Hobbies 🫶🏼
+
+Cooking, Cleaning, Travelling
