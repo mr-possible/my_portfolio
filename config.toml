@@ -1,4 +1,4 @@
-baseURL = "/"
+title = "My Portfolio"
 theme = "hugo-coder"
 languageCode = "en"
 defaultContentLanguage = "en"
@@ -11,11 +11,11 @@ noClasses = false
 [params]
 author = "Sambhav Dave"
 description = "Sambhav's portfolio"
-keywords = "sdet,developer,portfolio,test automation"
+keywords = "sdet,developer,portfolio,test automation,qa automation,qa,testing"
 info = [
         "Software Engineer | SDET",
         "3+ years of professional experience in software development.",
-        "Open to full times roles starting from Jan 2024"
+        "Open to full times roles starting from Jan 2024."
     ]
 avatarURL = "images/dp.jpeg"
 
@@ -25,9 +25,8 @@ avatarURL = "images/dp.jpeg"
 # Right To Left, shift content direction for languagues such as Arabic
 rtl = false
 
-
 # Specify light/dark colorscheme (auto/dark/light)
-colorScheme = "auto"
+colorScheme = "dark"
 
 # Custom CSS
 customCSS = []
@@ -40,60 +39,6 @@ customJS = []
 
 # Custom remote JS files
 customRemoteJS = []
-
-# If you want to use fathom(https://usefathom.com) for analytics, add this section
-# [params.fathomAnalytics]
-# siteID = "ABCDE"
-# serverURL = "analytics.example.com" # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
-
-# If you want to use plausible(https://plausible.io) for analytics, add this section
-# [params.plausibleAnalytics]
-# domain = "example.com"
-# serverURL = "analytics.example.com" # Default value is plausible.io, overwrite this if you are self-hosting or using a custom domain
-# outboundLinksTracking = true
-# fileDownloadsTracking = true
-
-# If you want to use goatcounter(https://goatcounter.com) for analytics, add this section
-# [params.goatCounter]
-# code = "code"
-
-# If you want to use Cloudflare Web Analytics(https://cloudflare.com) for analytics, add this section
-# [params.cloudflare]
-# token = "token"
-
-# If you want to use Matomo(https://matomo.org) for analytics, add this section
-# [params.matomo]
-# siteID = "ABCDE" # Default value is "1", overwrite this if you are cloud-hosting
-# serverURL = "analytics.example.com" # For cloud-hosting, use provided URL, e.g. example.matomo.cloud
-
-# If you want to use Umami(https://umami.is) for analytics, add this section
-# [params.umami]
-# siteID = "ABCDE"
-# scriptURL = "analytics.REGION.umami.is/SCRIPTNAME.js" 
-
-# If you want to implement a Content-Security-Policy, add this section
-# [params.csp]
-# childsrc = ["'self'"]
-# fontsrc = ["'self'", "https://fonts.gstatic.com", "https://cdn.jsdelivr.net/"]
-# formaction = ["'self'"]
-# framesrc = ["'self'", "https://www.youtube.com"]
-# imgsrc = ["'self'"]
-# objectsrc = ["'none'"]
-# stylesrc = [
-#   "'self'",
-#   "'unsafe-inline'",
-#   "https://fonts.googleapis.com/",
-#   "https://cdn.jsdelivr.net/",
-# ]
-# scriptsrc = [
-#   "'self'",
-#   "'unsafe-inline'",
-#   "https://www.google-analytics.com",
-#   "https://cdn.jsdelivr.net/",
-# ]
-# prefetchsrc = ["'self'"]
-# # connect-src directive – defines valid targets for to XMLHttpRequest (AJAX), WebSockets or EventSource
-# connectsrc = ["'self'", "https://www.google-analytics.com"]
 
 [taxonomies]
 category = "categories"
@@ -111,26 +56,26 @@ target = "_blank"
 [[params.social]]
 name = "Twitter"
 icon = "fa fa-2x fa-twitter"
-weight = 3
+weight = 2
 url = "https://twitter.com/DaveSambhav"
 target = "_blank"
 
 [[params.social]]
 name = "LinkedIn"
 icon = "fa fa-2x fa-linkedin"
-weight = 4
+weight = 3
 url = "https://www.linkedin.com/in/sambhav6197/"
 target = "_blank"
 
 [[params.social]]
 name = "Medium"
 icon = "fa fa-2x fa-medium"
-weight = 5
+weight = 4
 url = "https://medium.com/@mr_possible"
 target = "_blank"
 
 [[params.social]]
-name = "Medium"
+name = "Youtube"
 icon = "fa fa-2x fa-youtube"
 weight = 5
 url = "https://youtube.com/@mr_possible6197?si=gdgCWTw9bOTrOdjt"
@@ -147,11 +92,9 @@ url = "/"
 [[languages.en.menu.main]]
 name = "About"
 weight = 2
-url = "about/"
+url = "/about"
 
 [[languages.en.menu.main]]
 name = "Projects"
 weight = 3
-url = "projects/"
-    
-
+url = "/projects"
