@@ -111,7 +111,7 @@ I am a passionate and detail-oriented Software Engineer from India. With a keen 
 - **Languages:** English (Business-fluent), Hindi (Mother-tongue)
 - **Marital Status:** Single
 - **Current Location:** Swansea, Wales, United Kingdom
-- **VISA status:** Student Visa (expiring in Mar 2024)
+- **VISA status:** Student Visa (expiring in May 2024)
 - **Require visa sponsorship to work full time:** Yes
 
 ---
