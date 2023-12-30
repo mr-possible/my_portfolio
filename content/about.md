@@ -3,13 +3,13 @@ title = "About Me"
 +++
 ## Summary
 
-I am a passionate and detail-oriented Software Engineer from India. With a keen interest in ensuring software quality and delivering robust solutions, I bring a unique blend of technical skills and a quality-focused mindset. I am aiming for full-time roles in the United Kingdom, Northern Ireland and Europe regions, starting from January 2024. Please scroll down to know more 😀.
+I am a passionate and detail-oriented Software Engineer from India. With a keen interest in ensuring software quality and delivering robust solutions, I bring a unique blend of technical skills and a quality-focused mindset. I am aiming for full-time roles in the United Kingdom, Northern Ireland and Europe regions, starting from February 2024. Please scroll down to know more 😀.
 
 ---
 
 ## Education 📚
 
-### 2023 - Exp 2024
+### 2023 - 2024
 
 **University:** Swansea University  
 **Location:** Swansea, United Kingdom  
