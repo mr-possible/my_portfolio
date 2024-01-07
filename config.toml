@@ -17,7 +17,7 @@ info = [
         "3+ years of professional experience in software development.",
         "Open to full times roles starting from Jan 2024."
     ]
-avatarURL = "images/dp.jpeg"
+avatarURL = "images/dp.jpg"
 
 # Git Commit in Footer, uncomment the line below to enable it
 #commit = "https://github.com/luizdepra/hugo-coder/tree/"
