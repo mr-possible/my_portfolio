@@ -14,7 +14,7 @@ description = "Sambhav's portfolio"
 keywords = "sdet,developer,portfolio,test automation,qa automation,qa,testing"
 info = [
         "Software Engineer | SDET",
-        "Skilled sofware engineer with 3+ years of full-time experience so far."
+        "Skilled sofware engineer with 3+ years of full-time experience so far.",
     ]
 avatarURL = "images/dp.jpg"
 
