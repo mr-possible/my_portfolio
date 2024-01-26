@@ -10,14 +10,6 @@ A project that demonstrates the motive behing single responsibility princinple a
 
 [Github Link](https://github.com/mr-possible/SingleResponsibilityPrincipal_Demo) | [Video Overview](https://youtu.be/ImQeSQ_iXqs?si=URAlrXr6Ar_JWs40)
 
-## API Testing Framework implemented using Python
-
-Skills: Python, Behave, Cucumber, BDD, Poetry.
-
-A project that is implemented using Python to cater to API testing using a library called Behave. I have followed BDD approach in this project and have attempted to use Cucumber.
-
-[Github Link](https://github.com/mr-possible/python-api-automation)
-
 ## Selenium Framework with Disposable Selenium Grid using Docker
 
 Skills: Java 17, Selenium Webdriver, Selenium Grid, Docker, Jenkins, AWS.
@@ -25,6 +17,14 @@ Skills: Java 17, Selenium Webdriver, Selenium Grid, Docker, Jenkins, AWS.
 A project that demonstrates how dockerised selenium grid can help fasten the testing process and avoid resource constraints. Continous Integration (CI) is implemented using Jenkins and AWS.
 
 [Github Link](https://github.com/mr-possible/selenium-with-docker)
+
+## API Testing Framework implemented using Python
+
+Skills: Python, Behave, Cucumber, BDD, Poetry.
+
+A project that is implemented using Python to cater to API testing using a library called Behave. I have followed BDD approach in this project and have attempted to use Cucumber.
+
+[Github Link](https://github.com/mr-possible/python-api-automation)
 
 ## IPL Match History Full Stack Application
 
@@ -38,7 +38,7 @@ A full stack application that can show IPL match history in a user-intuitive man
 
 Skills: NodeJS, ReactJS, Websockets, Solidity, Postgres.
 
-A full stack decentralised application (dApp) that simulates voting process done without the compromise of user's data. There are two services running namely - the admin service and the voting service. I am using Postgres to store user information in a hashed format. User is getting authenticated using JWT tokens.
+This was my MSc thesis and final MSc project - A full stack decentralised application (dApp) that simulates voting process done without the compromise of user's data. There are two services running namely - the admin service and the voting service. I am using Postgres to store user information in a hashed format. User is getting authenticated using JWT tokens.
 
 [Github Link](https://github.com/mr-possible/ipl-dashboard)
 
@@ -57,3 +57,11 @@ Skills: Java 17, Spring Boot, Spring Cloud.
 A project that demonstrates a basic architecture of microservices tied together using Spring Boot's offering called as Spring Cloud. Also ensures - Service Discovery, Fault Tolerance, Load Balancing and Distributed Tracing.
 
 [Github Link](https://github.com/mr-possible/spring-cloud-fundamentals)
+
+## Book Review Website
+
+Skills: PHP, Laravel 10, MySQL, Docker.
+
+A university coursework project that demonstrates learnings on laravel full stack web application. I attempted to submit this project as part of my final submission and got 90% marks. I learned the overall architecture of a full stack application (using Laravel in this case) and also learned how to effectively manage your code and your time using modern toolkits and software. A fun learning experience, I must say!.
+
+[Github Link](https://github.com/mr-possible/book-review-site)
