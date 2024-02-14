@@ -3,7 +3,7 @@ title = "About Me"
 +++
 ## Summary
 
-I am a passionate and detail-oriented Software Engineer/SDET from India. With a keen interest in ensuring software quality and delivering robust solutions, I bring a unique blend of technical skills and a quality-focused mindset. Please scroll down to know more 😀.
+I am a passionate and detail-oriented Software Engineer/SDET from India. With a keen interest in ensuring software quality and delivering robust solutions, I bring a unique blend of technical skills and a quality-focused mindset. Please scroll down to know more about me 😀.
 
 ---
 
@@ -30,7 +30,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 ### Student Teaching Assistant
 
 **Organisation:** Swansea University  
-**Duration:** Oct/2023 - Present  
+**Duration:** Oct/2023 - Dec/2023  
 **Location:** Swansea, United Kingdom  
 **Mode:** Onsite | Part-time  
 **Description:**  
@@ -40,7 +40,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 - Both of these labs consist of ~100 students each, running twice a week for 2 hours.
 - Main tech stack used: *Java, Laravel, Tailwind CSS, React*
 
-### Software Development Intern (Python Developer)
+### Student Software Developer (Python Developer)
 
 **Organisation:** SAIL Databank  
 **Duration:** Jun/2023 - Sept/2023  
@@ -49,11 +49,11 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 **Description:**  
 
 - **Daily Routine**: Scrum Meetings & occasional supervisor meetups.
-- Joined as a part-time developer to a team of 5 developers cum researchers in the field of Population Data Science.
+- Joined as a part-time developer intern to a team of 5 developers cum researchers in the field of Population Data Science.
 - Main work revolved around feature development using Django, solving bugs and also developing an API client for internal use by researchers.
 - Main tech stack used: *Python, Tkinter, Django*
 
-### Consultant (Software Developer)
+### Consultant (SDET)
 
 **Organisation:** Genpact Digital  
 **Duration:** Mar/2021 - Dec/2022  
@@ -61,7 +61,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 **Mode:** Remote | Full-time  
 **Description:**  
 
-- **Daily Routine**: Scrum Meetings, PR reviews, Debugging, client communication.
+- **Daily Routine**: SQA, Scrum Meetings, PR reviews, Debugging, client communication.
 - Joined as a full stack developer for a SaaS project called as PVAI (Pharmacovigilance Artificial Intelligence) that served pharma giants across Europe and UK.
 - Collaborated with pharmacovigilance experts to understand domain-specific requirements and incorporate them into software solutions.
 - Created RESTful APIs using Java with Spring framework.
@@ -74,7 +74,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 - **PVAI Spot Award** - Acknowledged by the program manager for swift onboarding and rapid adaptation and valuable contribution to the team dynamics during a critical phase of the ongoing project.
 - **PVAI Enabler of Excellence** - Received award for rapidly mentoring colleagues in Test Automation, preparing them efficiently for real assignments.
 
-### Assistant Systems Engineer (SDET)
+### Assistant Systems Engineer (Automation QA)
 
 **Organisation:** Tata Consultancy Services Pvt Ltd.  
 **Duration:** Jul/2019 - Mar/2021  
@@ -82,8 +82,8 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 **Mode:** Onsite and then Remote (due to COVID) | Full-time  
 **Description:**  
 
-- **Daily Routine**: Scrum Meetings, PR reviews.
-- Joined as a SDET to the QA team of TCS BaNCS (a software suite developed by TCS to serve leading banks across the globe).
+- **Daily Routine**: SQA, Scrum Meetings, PR reviews.
+- Joined as a junior SDET to the QA team of TCS BaNCS (a software suite developed by TCS to serve leading banks across the globe).
 - Helped the manual team to write test cases and also learned how to make a test plan.
 - Solely designed and setup the core test automation framework for the QA team to carry the work forward.
 - Implemented CI/CD for the test-scripts to run on AWS EC2 containers.
@@ -110,9 +110,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 
 - **Languages:** English (Business-fluent), Hindi (Mother-tongue)
 - **Marital Status:** Single
-- **Current Location:** Swansea, Wales, United Kingdom
-- **VISA status:** Student Visa (expiring in May 2024)
-- **Require visa sponsorship to work full time:** Yes
+- **Current Location:** Bhilai, Chhattisgarh, India
 
 ---
 
@@ -136,4 +134,4 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 
 ## Hobbies 🫶🏼
 
-Cooking, Cleaning, Travelling
+Cooking, Cleaning, Travelling, Hiking
