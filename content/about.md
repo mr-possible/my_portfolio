@@ -14,7 +14,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 **University:** Swansea University  
 **Location:** Swansea, United Kingdom  
 **Degree:** Master of Science - Advanced Computer Science  
-**Grade:** NA
+**Grade:** Distinction
 
 ### 2015 - 2019
 
@@ -26,6 +26,21 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 ---
 
 ## Professional Experience 🕵🏼‍♂️
+
+### Senior Automation Test Engineer
+
+**Organisation:** Xogene Servicess LLC  
+**Duration:** Mar/2024 - Present  
+**Location:** Pune, India  
+**Mode:** Remote | Full-time  
+**Description:**  
+
+- **Daily Routine**: 
+- Sole automation tester in the team (individual contributor).
+- Setting up the automation test infrastruction from scratch.
+- Laying out the automation test strategy.
+- Mentoring peers.
+- Main tech stack used: *Java, Selenium Webdriver, REST-assured, Docker, AWS*
 
 ### Student Teaching Assistant
 
