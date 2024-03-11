@@ -29,7 +29,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 
 ### Senior Automation Test Engineer
 
-**Organisation:** Xogene Servicess LLC  
+**Organisation:** Xogene Services LLC  
 **Duration:** Mar/2024 - Present  
 **Location:** Pune, India  
 **Mode:** Remote | Full-time  
