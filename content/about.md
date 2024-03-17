@@ -37,7 +37,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 
 - **Daily Routine**: 
 - Sole automation tester in the team (individual contributor).
-- Setting up the automation test infrastruction from scratch.
+- Setting up the automation test infrastructure from scratch.
 - Laying out the automation test strategy.
 - Mentoring peers.
 - Main tech stack used: *Java, Selenium Webdriver, REST-assured, Docker, AWS*
