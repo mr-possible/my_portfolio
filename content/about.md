@@ -13,7 +13,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 
 **University:** Swansea University  
 **Location:** Swansea, United Kingdom  
-**Degree:** Master of Science - Advanced Computer Science  
+**Degree:** Master of Science - Computer Science  
 **Grade:** Distinction
 
 ### 2015 - 2019
@@ -21,7 +21,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 **University:** Chhattisgarh Swami Vivekananda Technical University  
 **Location:** Bhilai, India  
 **Degree:** Bachelor of Engineering - Computer Science  
-**Grade:** 8.65 out of 10
+**Grade:** 8.65 out of 10 (Honors Division)
 
 ---
 
@@ -31,22 +31,23 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 
 **Organisation:** Xogene Services LLC  
 **Duration:** Mar/2024 - Present  
-**Location:** Pune, India  
+**Location:** Pune, Maharashtra, India  
 **Mode:** Remote | Full-time  
 **Description:**  
 
-- **Daily Routine**: 
+- **Daily Routine**: SQA, Scrum Meetings, PR reviews, Debugging.
 - Sole automation tester in the team (individual contributor).
 - Setting up the automation test infrastructure from scratch.
 - Laying out the automation test strategy.
 - Mentoring peers.
-- Main tech stack used: *Java, Selenium Webdriver, REST-assured, Docker, AWS*
+- Helping the product testing team in writing efficient test cases.
+- Main tech stack used: *Java, Selenide, REST-assured, Docker, AWS*
 
 ### Student Teaching Assistant
 
 **Organisation:** Swansea University  
 **Duration:** Oct/2023 - Dec/2023  
-**Location:** Swansea, United Kingdom  
+**Location:** Swansea, Wales, United Kingdom  
 **Mode:** Onsite | Part-time  
 **Description:**  
 
@@ -59,7 +60,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 
 **Organisation:** SAIL Databank  
 **Duration:** Jun/2023 - Sept/2023  
-**Location:** Swansea, United Kingdom  
+**Location:** Swansea, Wales, United Kingdom  
 **Mode:** Remote | Part-time  
 **Description:**  
 
@@ -72,16 +73,14 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 
 **Organisation:** Genpact Digital  
 **Duration:** Mar/2021 - Dec/2022  
-**Location:** Bangalore, India  
+**Location:** Bangalore, Karnataka, India  
 **Mode:** Remote | Full-time  
 **Description:**  
 
 - **Daily Routine**: SQA, Scrum Meetings, PR reviews, Debugging, client communication.
-- Joined as a full stack developer for a SaaS project called as PVAI (Pharmacovigilance Artificial Intelligence) that served pharma giants across Europe and UK.
-- Collaborated with pharmacovigilance experts to understand domain-specific requirements and incorporate them into software solutions.
-- Created RESTful APIs using Java with Spring framework.
-- Developed and maintained front-end web applications using React.js.
-- Provided technical support during post-deployment stages including bug fixing and maintenance tasks.
+- Joined as a SDET for a SaaS project called as PVAI (Pharmacovigilance Artificial Intelligence) that served pharma giants across Europe and UK.
+- Extended the test automation framework by code refactoring and adding new features.
+- Leveraged Selenium WebDriver & REST-Assured for test automation, increasing coverage by 40%.
 - Main tech stack used: *Java, SpringBoot, React, Redis, AWS, Selenium Webdriver, REST-Assured*
 
 **Awards:**  
@@ -93,7 +92,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 
 **Organisation:** Tata Consultancy Services Pvt Ltd.  
 **Duration:** Jul/2019 - Mar/2021  
-**Location:** Nagpur, India  
+**Location:** Nagpur, Maharashtra, India  
 **Mode:** Onsite and then Remote (due to COVID) | Full-time  
 **Description:**  
 
@@ -114,10 +113,10 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 - **Backend:** Spring Boot, Django, NodeJS.
 - **Frontend:** HTML, JavaScript, React.
 - **CI/CD:** Jenkins, Github Actions, Docker.
-- **Testing:** Postman, TestNG, Selenium Webdriver, REST-Assured.
+- **Testing:** Postman, TestNG, Selenium Webdriver, Selenide, WebdriverIO, REST-Assured
 - **Databases:** MySQL
 - **Version Control:** Git
-- **Other:** Apache Maven, Poetry, MS Azure, AWS (not an expert).
+- **Tools/Cloud:** Apache Maven, Poetry, MS Azure, AWS (not an expert).
 
 ---
 
@@ -125,7 +124,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 
 - **Languages:** English (Business-fluent), Hindi (Mother-tongue)
 - **Marital Status:** Single
-- **Current Location:** Bhilai, Chhattisgarh, India
+- **Current Location:** Bhilai, Chhattisgarh, India (working remotely from home)
 
 ---
 
