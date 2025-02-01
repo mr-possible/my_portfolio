@@ -27,20 +27,32 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 
 ## Professional Experience 🕵🏼‍♂️
 
+### Senior SDET
+
+**Organisation:** SeekOut  
+**Duration:** Mar/2025 - Present  
+**Location:** Pune, Maharashtra, India  
+**Mode:** Hybrid | Full-time  
+**Description:**  
+
+- **Daily Routine**: SQA, Scrum Meetings, PR reviews, Debugging, Test Automation
+- Setting up the automation test infrastructure from scratch.
+- Laying out the automation test strategy.
+- Doing code reviews for test automation code ensuring industry standard code quality. 
+- Main tech stack used: *Typescript, Playwright, Azure DevOps*
+
 ### Senior Automation Test Engineer
 
 **Organisation:** Xogene Services LLC  
-**Duration:** Mar/2024 - Present  
+**Duration:** Mar/2024 - Mar/2025  
 **Location:** Pune, Maharashtra, India  
 **Mode:** Remote | Full-time  
 **Description:**  
 
-- **Daily Routine**: SQA, Scrum Meetings, PR reviews, Debugging.
-- Sole automation tester in the team (individual contributor).
-- Setting up the automation test infrastructure from scratch.
-- Laying out the automation test strategy.
-- Mentoring peers.
-- Helping the product testing team in writing efficient test cases.
+- **Daily Routine**: SQA, Scrum Meetings, PR reviews, Debugging, Test Automation.
+- First automation tester who built the automation test infrastructure from scratch.
+- Laid out the automation test strategy.
+- Helped the product testing team in writing efficient test cases.
 - Main tech stack used: *Java, Selenide, REST-assured, Docker, AWS*
 
 ### Student Teaching Assistant
@@ -51,7 +63,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 **Mode:** Onsite | Part-time  
 **Description:**  
 
-- **Daily Routine**: Walking, walking, walking and also resolving students' practical and conceptual doubts.
+- **Daily Routine**: Management of labs and resolving course related doubts of BSc/MSc students. 
 - My job is to assist in labs of Java programming and Web Development modules.
 - Both of these labs consist of ~100 students each, running twice a week for 2 hours.
 - Main tech stack used: *Java, Laravel, Tailwind CSS, React*
@@ -77,7 +89,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 **Mode:** Remote | Full-time  
 **Description:**  
 
-- **Daily Routine**: SQA, Scrum Meetings, PR reviews, Debugging, client communication.
+- **Daily Routine**: SQA, Scrum Meetings, PR reviews, Debugging, Test Automation.
 - Joined as a SDET for a SaaS project called as PVAI (Pharmacovigilance Artificial Intelligence) that served pharma giants across Europe and UK.
 - Extended the test automation framework by code refactoring and adding new features.
 - Leveraged Selenium WebDriver & REST-Assured for test automation, increasing coverage by 40%.
@@ -85,7 +97,8 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 
 **Awards:**  
 
-- **PVAI Spot Award** - Acknowledged by the program manager for swift onboarding and rapid adaptation and valuable contribution to the team dynamics during a critical phase of the ongoing project.
+- **PVAI Spot Award** - Acknowledged by the VP (Quality Engineering) for swift onboarding and rapid adaptation and valuable contribution to the team dynamics during a critical phase of the ongoing project.
+
 - **PVAI Enabler of Excellence** - Received award for rapidly mentoring colleagues in Test Automation, preparing them efficiently for real assignments.
 
 ### Assistant Systems Engineer (Automation QA)
@@ -96,9 +109,9 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 **Mode:** Onsite and then Remote (due to COVID) | Full-time  
 **Description:**  
 
-- **Daily Routine**: SQA, Scrum Meetings, PR reviews.
+- **Daily Routine**: SQA, Scrum Meetings, Test Automation.
 - Joined as a junior SDET to the QA team of TCS BaNCS (a software suite developed by TCS to serve leading banks across the globe).
-- Helped the manual team to write test cases and also learned how to make a test plan.
+- Learned to write efficient test cases and automated them enhancing overall test coverage.
 - Solely designed and setup the core test automation framework for the QA team to carry the work forward.
 - Implemented CI/CD for the test-scripts to run on AWS EC2 containers.
 - Introduced healthy practices as a software engineer for fellow members to follow. Maintained proper documentation also.
@@ -113,10 +126,10 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 - **Backend:** Spring Boot, Django, NodeJS.
 - **Frontend:** HTML, JavaScript, React.
 - **CI/CD:** Jenkins, Github Actions, Docker.
-- **Testing:** Postman, TestNG, Selenium Webdriver, Selenide, WebdriverIO, REST-Assured
+- **Testing:** Postman, TestNG, Selenium Webdriver, Selenide, WebdriverIO, Playwright, REST-Assured
 - **Databases:** MySQL
 - **Version Control:** Git
-- **Tools/Cloud:** Apache Maven, Poetry, MS Azure, AWS (not an expert).
+- **Tools/Cloud:** Apache Maven, Poetry, MS Azure DevOps, AWS (not an expert).
 
 ---
 
@@ -124,7 +137,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 
 - **Languages:** English (Business-fluent), Hindi (Mother-tongue)
 - **Marital Status:** Single
-- **Current Location:** Bhilai, Chhattisgarh, India (working remotely from home)
+- **Current Location:** Pune, Maharashtra, India
 
 ---
 
@@ -148,4 +161,4 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 
 ## Hobbies 🫶🏼
 
-Cooking, Cleaning, Travelling, Hiking
+Cooking, Cleaning, Travelling.
