@@ -31,17 +31,18 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 
 **Organisation:** SeekOut  
 **Duration:** Mar/2025 - Present  
-**Location:** Pune, Maharashtra, India  
+**Location:** Bangalore, Karnataka, India  
 **Mode:** Hybrid | Full-time  
 **Description:**  
 
-- **Daily Routine**: SQA, Scrum Meetings, PR reviews, Debugging, Test Automation
-- Setting up the automation test infrastructure from scratch.
-- Laying out the automation test strategy.
+- **Daily Routine**: SQA, Scrum Meetings, PR reviews, Debugging, Test Automation, Product Smoke and Regression Testing
+- Architected the core test strategy for Outreach platform within the engineering team.
+- Wrote service level unit and integration tests for NestJS backend services.
+- Solely involved as principle QA for in-sprint testing of new features.
 - Doing code reviews for test automation code ensuring industry standard code quality. 
-- Main tech stack used: *Typescript, Playwright, Azure DevOps*
+- Main tech stack used: *Typescript, Playwright, Azure DevOps, NestJS*
 
-### Senior Automation Test Engineer
+### Senior SDET
 
 **Organisation:** Xogene Services LLC  
 **Duration:** Mar/2024 - Mar/2025  
@@ -49,10 +50,11 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 **Mode:** Remote | Full-time  
 **Description:**  
 
-- **Daily Routine**: SQA, Scrum Meetings, PR reviews, Debugging, Test Automation.
+- **Daily Routine**: SQA, Scrum Meetings, PR reviews, Debugging, Test Automation
 - First automation tester who built the automation test infrastructure from scratch.
-- Laid out the automation test strategy.
+- Laid out the automation test strategy and created/maintained test automation deliverables.
 - Helped the product testing team in writing efficient test cases.
+- Added user centric locators to frontend for better and reliable automated testing.
 - Main tech stack used: *Java, Selenide, REST-assured, Docker, AWS*
 
 ### Student Teaching Assistant
@@ -76,7 +78,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 **Mode:** Remote | Part-time  
 **Description:**  
 
-- **Daily Routine**: Scrum Meetings & occasional supervisor meetups.
+- **Daily Routine**: Scrum Meetings & occasional supervisor meetups
 - Joined as a part-time developer intern to a team of 5 developers cum researchers in the field of Population Data Science.
 - Main work revolved around feature development using Django, solving bugs and also developing an API client for internal use by researchers.
 - Main tech stack used: *Python, Tkinter, Django*
@@ -89,7 +91,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 **Mode:** Remote | Full-time  
 **Description:**  
 
-- **Daily Routine**: SQA, Scrum Meetings, PR reviews, Debugging, Test Automation.
+- **Daily Routine**: SQA, Scrum Meetings, PR reviews, Debugging, Test Automation
 - Joined as a SDET for a SaaS project called as PVAI (Pharmacovigilance Artificial Intelligence) that served pharma giants across Europe and UK.
 - Extended the test automation framework by code refactoring and adding new features.
 - Leveraged Selenium WebDriver & REST-Assured for test automation, increasing coverage by 40%.
@@ -109,7 +111,7 @@ I am a passionate and detail-oriented Software Engineer/SDET from India. With a 
 **Mode:** Onsite and then Remote (due to COVID) | Full-time  
 **Description:**  
 
-- **Daily Routine**: SQA, Scrum Meetings, Test Automation.
+- **Daily Routine**: SQA, Scrum Meetings, Test Automation
 - Joined as a junior SDET to the QA team of TCS BaNCS (a software suite developed by TCS to serve leading banks across the globe).
 - Learned to write efficient test cases and automated them enhancing overall test coverage.
 - Solely designed and setup the core test automation framework for the QA team to carry the work forward.
