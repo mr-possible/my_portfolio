@@ -1,4 +1,4 @@
-title = "My Portfolio"
+title = "Sambhav Dave - Portfolio"
 theme = "hugo-coder"
 languageCode = "en"
 defaultContentLanguage = "en"
@@ -11,10 +11,10 @@ noClasses = false
 [params]
 author = "Sambhav Dave"
 description = "Sambhav's portfolio"
-keywords = "sdet,developer,portfolio,test automation,qa automation,qa,testing"
+keywords = "sdet,software engineer,test automation,qa automation,qa,testing,backend developer,full stack developer,java,python,selenium,playwright,spring boot,django,react,nodejs,ci cd,jenkins,docker,aws,azure devops,api testing,rest assured,selenide,webdriverio,testng,postman,mysql,git,typescript,javascript,agile,scrum,software quality assurance,automation framework,test strategy,integration testing,unit testing,regression testing,performance testing,devops,cloud computing,microservices,spring cloud,blockchain,ethereum,solidity,smart contracts,decentralized applications,full stack,web development,software development,programming,computer science,msc,swansea university,india,bangalore,pune,remote work,hybrid work"
 info = [
         "Software Engineer | SDET",
-        "Skilled sofware engineer with 4+ years of full-time professional experience",
+        "Skilled sofware engineer with 5+ years of full-time professional experience",
     ]
 avatarURL = "images/dp.jpg"
 
