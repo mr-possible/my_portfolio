@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import BlogPostCard from '../components/BlogPostCard.astro';
+import { siteConfig } from '../data/site';
+
+const recentPosts = (
+  await getCollection('blog', ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+  })
+)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+<BaseLayout>
+  <section class="flex flex-col items-center text-center py-16">
+    <img
+      src={siteConfig.avatar}
+      alt={siteConfig.author}
+      class="w-32 h-32 rounded-full mb-6 border-2 border-[var(--border)]"
+      width="128"
+      height="128"
+    />
+    <h1 class="text-4xl font-bold">{siteConfig.author}</h1>
+    <p class="text-xl text-[var(--text-secondary)] mt-2">{siteConfig.description}</p>
+    <p class="mt-4 max-w-lg text-[var(--text-secondary)]">{siteConfig.tagline}</p>
+    <SocialLinks class="mt-6" />
+  </section>
+
+  {
+    recentPosts.length > 0 && (
+      <section class="mt-4">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold">Recent Posts</h2>
+          <a
+            href="/blog"
+            class="text-sm text-[var(--accent)] hover:underline"
+          >
+            View all &rarr;
+          </a>
+        </div>
+        <div class="space-y-6">
+          {recentPosts.map((post) => (
+            <BlogPostCard post={post} />
+          ))}
+        </div>
+      </section>
+    )
+  }
+</BaseLayout>

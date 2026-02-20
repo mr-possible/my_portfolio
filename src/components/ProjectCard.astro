@@ -1,0 +1,45 @@
+---
+import type { Project } from '../data/projects';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<div class="rounded-lg border border-[var(--border)] p-5 hover:border-[var(--accent)] transition-colors">
+  <h3 class="text-lg font-semibold mb-2">{project.title}</h3>
+  <p class="text-sm text-[var(--text-secondary)] mb-3">{project.description}</p>
+  <div class="flex flex-wrap gap-2 mb-4">
+    {
+      project.skills.map((skill) => (
+        <span class="text-xs px-2 py-1 rounded-full bg-[var(--bg-secondary)] text-[var(--text-secondary)]">
+          {skill}
+        </span>
+      ))
+    }
+  </div>
+  <div class="flex gap-3 text-sm">
+    <a
+      href={project.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-[var(--accent)] hover:underline"
+    >
+      GitHub
+    </a>
+    {
+      project.video && (
+        <a
+          href={project.video}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[var(--accent)] hover:underline"
+        >
+          Video
+        </a>
+      )
+    }
+  </div>
+</div>

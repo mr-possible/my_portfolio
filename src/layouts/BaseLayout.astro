@@ -1,0 +1,59 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { siteConfig } from '../data/site';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const pageTitle = title ? `${title} | ${siteConfig.title}` : siteConfig.title;
+const pageDescription = description || siteConfig.tagline;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={pageDescription} />
+    <meta name="author" content={siteConfig.author} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title={siteConfig.title} href="/rss.xml" />
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+
+    <title>{pageTitle}</title>
+
+    <!-- Prevent dark mode flash -->
+    <script is:inline>
+      const theme = localStorage.getItem('theme');
+      if (theme === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else if (!theme) {
+        // Default to dark
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+  </head>
+  <body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex flex-col">
+    <Header />
+    <main class="flex-1 max-w-3xl mx-auto w-full px-4 py-8">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
