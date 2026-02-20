@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPostCard from '../../components/BlogPostCard.astro';
+
+const allPosts = await getCollection('blog', ({ data }) => {
+  return import.meta.env.PROD ? data.draft !== true : true;
+});
+
+const sortedPosts = allPosts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<BaseLayout title="Blog" description="Thoughts on software engineering, testing, and more.">
+  <h1 class="text-3xl font-bold mb-8">Blog</h1>
+  {
+    sortedPosts.length === 0 ? (
+      <p class="text-[var(--text-secondary)]">No posts yet. Check back soon!</p>
+    ) : (
+      <div class="space-y-6">
+        {sortedPosts.map((post) => (
+          <BlogPostCard post={post} />
+        ))}
+      </div>
+    )
+  }
+</BaseLayout>

@@ -1,0 +1,27 @@
+---
+import BlogPostMeta from './BlogPostMeta.astro';
+
+interface Props {
+  post: {
+    id: string;
+    data: {
+      title: string;
+      description: string;
+      pubDate: Date;
+      tags: string[];
+    };
+  };
+}
+
+const { post } = Astro.props;
+---
+
+<article class="rounded-lg border border-[var(--border)] p-5 hover:border-[var(--accent)] transition-colors">
+  <a href={`/blog/${post.id}`} class="block group">
+    <h2 class="text-xl font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors">
+      {post.data.title}
+    </h2>
+  </a>
+  <BlogPostMeta pubDate={post.data.pubDate} tags={post.data.tags} />
+  <p class="text-[var(--text-secondary)] mt-3 text-sm">{post.data.description}</p>
+</article>
