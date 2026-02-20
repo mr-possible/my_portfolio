@@ -1,0 +1,12 @@
+---
+import SocialLinks from './SocialLinks.astro';
+---
+
+<footer class="border-t border-[var(--border)] mt-auto">
+  <div class="max-w-3xl mx-auto px-4 py-8 flex flex-col items-center gap-4">
+    <SocialLinks />
+    <p class="text-sm text-[var(--text-secondary)]">
+      &copy; {new Date().getFullYear()} Sambhav Dave
+    </p>
+  </div>
+</footer>

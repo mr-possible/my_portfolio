@@ -1,0 +1,19 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  frontmatter: {
+    title: string;
+    description?: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout title={frontmatter.title} description={frontmatter.description}>
+  <article class="prose prose-slate dark:prose-invert max-w-none prose-headings:text-[var(--text-primary)] prose-a:text-[var(--accent)] prose-strong:text-[var(--text-primary)]">
+    <h1>{frontmatter.title}</h1>
+    <slot />
+  </article>
+</BaseLayout>
