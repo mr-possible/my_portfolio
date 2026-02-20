@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import BlogPostCard from '../../../components/BlogPostCard.astro';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('blog', ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+  });
+
+  const allTags = [...new Set(allPosts.flatMap((post) => post.data.tags))];
+
+  return allTags.map((tag) => ({
+    params: { tag },
+    props: {
+      posts: allPosts
+        .filter((post) => post.data.tags.includes(tag))
+        .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
+    },
+  }));
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<BaseLayout title={`Posts tagged "${tag}"`}>
+  <h1 class="text-3xl font-bold mb-2">Tag: {tag}</h1>
+  <p class="text-[var(--text-secondary)] mb-8">
+    {posts.length} post{posts.length !== 1 ? 's' : ''}
+  </p>
+  <div class="space-y-6">
+    {posts.map((post) => <BlogPostCard post={post} />)}
+  </div>
+  <a href="/blog" class="text-[var(--accent)] hover:underline text-sm mt-8 inline-block">
+    &larr; All posts
+  </a>
+</BaseLayout>
