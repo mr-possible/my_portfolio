@@ -1,5 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import PromptLabel from '../components/PromptLabel.astro';
+import { proseClasses } from '../styles/prose';
 
 interface Props {
   frontmatter: {
@@ -12,8 +14,10 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout title={frontmatter.title} description={frontmatter.description}>
-  <article class="prose prose-slate dark:prose-invert max-w-none prose-headings:text-[var(--text-primary)] prose-a:text-[var(--accent)] prose-strong:text-[var(--text-primary)]">
-    <h1>{frontmatter.title}</h1>
+  <header class="mb-8">
+    <PromptLabel command={frontmatter.title} as="h1" />
+  </header>
+  <article class={proseClasses}>
     <slot />
   </article>
 </BaseLayout>
