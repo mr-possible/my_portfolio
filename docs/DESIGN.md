@@ -17,8 +17,8 @@ semantic class, never a raw hex or `var(--x)` arbitrary value.**
 | `text-content` | `--text-primary` | `#e5e5e0` | `#171717` | Headings, body text |
 | `text-content-muted` | `--text-secondary` | `#8a8a85` | `#5c5c57` | Descriptions, metadata |
 | `border-edge` | `--border` | `#262622` | `#e0ded8` | Card borders, dividers |
-| `text-accent` | `--accent` | `#f5a623` | `#a15c00` | Links, active nav, emphasis |
-| `text-accent-hover` | `--accent-hover` | `#ffc05c` | `#7a4600` | Link hover |
+| `text-accent` | `--accent` | `#f5a623` | `#8a4f00` | Links, active nav, emphasis |
+| `text-accent-hover` | `--accent-hover` | `#ffc05c` | `#6b3c00` | Link hover |
 | `bg-accent-muted` | `--accent-muted` | amber @ 12% | amber @ 10% | Badge/chip backgrounds |
 | `bg-accent-green` | `--accent-secondary` | `#4ade80` | `#16a34a` | **Availability status dot only** |
 
@@ -26,11 +26,33 @@ semantic class, never a raw hex or `var(--x)` arbitrary value.**
 
 - Amber is the only general-purpose accent. Green is reserved for the
   availability dot on the home page — do not use it anywhere else.
-- Every color pair above meets WCAG AA (≥4.5:1 for text, ≥3:1 for the
-  non-text status dot). If you change a hex value, re-check contrast.
 - Tailwind **opacity modifiers do not work** on these colors
   (`text-accent/50` will not render) because the values are `var()`-backed.
   Use the `accent-muted` token when you need a faded amber.
+
+### Contrast
+
+Every pair below is measured, not assumed. Light mode is the tighter of the
+two themes; dark mode clears AA everywhere with a wide margin.
+
+| Pairing | Light | Dark | Bar |
+|---|---|---|---|
+| `text-content` on `bg-surface` | 17.2:1 | 15.7:1 | 4.5:1 |
+| `text-content-muted` on `bg-surface` | 6.4:1 | 5.7:1 | 4.5:1 |
+| `text-accent` on `bg-surface` | 6.29:1 | 9.8:1 | 4.5:1 |
+| `text-accent` on `bg-accent-muted`, over a card | **5.01:1** | 7.4:1 | 4.5:1 |
+| `text-accent` on `bg-accent-muted`, over the page | **5.43:1** | 8.2:1 | 4.5:1 |
+| `bg-accent-green` dot on `bg-surface` | 3.2:1 | 11.4:1 | 3:1 (non-text) |
+
+The two bolded rows are the ones that bite. `bg-accent-muted` is a **translucent
+overlay** (amber at 10–12%), so a chip's real background is the accent composited
+over whatever sits behind it — and that composite is what has to clear 4.5:1, not
+the token against the page background. Checking `--accent` against `bg-surface`
+alone once passed while the actual chips shipped at 4.01:1 and failed AA.
+
+**If you change `--accent` or `--accent-muted`, re-measure the two composite rows
+in a browser** — compute the effective background yourself rather than reading
+the token's hex.
 
 ## Typography
 
@@ -45,6 +67,7 @@ Size scale (stock Tailwind — do not introduce custom sizes):
 
 | Element | Class |
 |---|---|
+| Display (home hero `h1`, 404 code) | `text-3xl sm:text-4xl`, `text-6xl` |
 | Page title | `text-2xl sm:text-3xl` |
 | Section heading | `text-xl sm:text-2xl` |
 | Card title | `text-base` or `text-lg` |
@@ -62,7 +85,8 @@ anything that should read as "machine output."
   availability dot (`src/pages/index.astro`) and the timeline dot
   (`src/components/TimelineItem.astro`) — both are small circular indicators,
   not cards or controls. Do not add a third.
-- Page container is `max-w-3xl mx-auto px-4` (set once in `BaseLayout`).
+- Page container is `flex-1 max-w-3xl mx-auto w-full px-4 py-12` (set once on
+  `<main>` in `BaseLayout`). Pages never set their own width.
 - Card grids: `grid gap-4 sm:grid-cols-2`. Stacked lists: `space-y-4`.
 
 ## Motion
@@ -76,6 +100,10 @@ Four effects, all defined in `global.css`, all disabled under
 | Scroll entrance | Add `class="reveal"` to a section; the observer in `BaseLayout` handles the rest |
 | Blinking cursor | Add a dedicated element with `class="cursor-blink"`, e.g. `<span class="cursor-blink text-accent ml-0.5" aria-hidden="true">▋</span>` |
 | Pulsing dot | Add `class="status-pulse"` to the dot span |
+
+`.reveal` is also forced visible under `@media print` — without that, any
+section below the fold never receives `is-visible` and prints blank. This
+matters most on `/about`, which is a résumé people save as PDF.
 
 > **Note on the blinking cursor:** an earlier version of this system injected
 > the `▋` glyph via a `.cursor-blink::after` pseudo-element. That approach was
@@ -93,16 +121,30 @@ Do not add page transitions, parallax, or an animation library.
 |---|---|---|
 | `Card.astro` | `as`, `interactive`, `class` | Any bordered content block. Set `interactive={false}` for non-clickable cards. |
 | `Badge.astro` | `href`, `class` | Skill tags, blog tags, any short chip. Renders `<a>` if `href` is given. |
-| `PromptLabel.astro` | `command`, `as`, `class` | Every page title and major section heading. Renders `$ <command>`. |
+| `PromptLabel.astro` | `command`, `as`, `class` | Section headings, and page titles that read as a command. Renders `$ <command>`. See the note below. |
 | `Icon.astro` | `name`, `class` | Any inline SVG. Add new paths to `src/data/icons.ts`. |
 | `Timeline.astro` + `TimelineItem.astro` | see props in file | Chronological entries (currently About → experience). |
 | `SocialLinks.astro` | `class` | The social icon row. Driven by `siteConfig.social`. |
-| `BlogPostCard.astro` / `ProjectCard.astro` | `post` / `project` | List items on blog and project pages. |
+| `BlogPostCard.astro` / `ProjectCard.astro` | `post` / `project`, `as` | List items on blog and project pages. `as` sets the heading level (`'h2'` default, `'h3'`) — see the note below. |
 | `BlogPostMeta.astro` | `pubDate`, `tags` | Date + tag row on post cards and post headers. |
 
 `Header.astro`, `Footer.astro`, and `ThemeToggle.astro` are site chrome
 composed once inside `BaseLayout` — new pages get them for free and should not
 reimplement or duplicate them.
+
+> **`PromptLabel` is not universal.** Three headings are deliberately raw
+> `<h1>`s instead: the home hero (a name, not a command), a blog post title
+> (`BlogPostLayout.astro`), and the 404 code. Use `PromptLabel` when the
+> heading names an action or a listing — `$ ls ~/projects`, `$ whoami`,
+> `$ cat ~/blog/*`. Use a raw mono `<h1>` when the heading is a proper noun or
+> content title, where a `$` prefix would be nonsense.
+
+> **Heading levels are a prop, not a constant.** The same card appears under
+> different outlines: on `/projects` the cards sit directly under the page
+> `h1`, so they are `h2`; on `/` they sit under an `h2` section label, so they
+> are `h3`. Pass `as` to match the page, and check the resulting outline never
+> skips a level — `document.querySelectorAll('h1,h2,h3,h4')` in the console is
+> enough to confirm it.
 
 ## Cheat sheet — adding things
 
@@ -116,10 +158,15 @@ Styling comes from `BlogPostLayout` + `proseClasses`. No CSS needed.
 **A new About entry (job, degree, skill, activity):** add it to
 `src/data/about.ts`. The page renders from that data.
 
-**A new page:** wrap it in `BaseLayout`, open with a `PromptLabel as="h1"`, and
-add `class="reveal"` to major sections. Compose from `Card` / `Badge` rather
-than writing new container styles. Add the route to `siteConfig.nav` if it
-belongs in the header.
+**A new page, mostly prose:** write it as markdown in `src/pages/` with
+`layout: ../layouts/MarkdownLayout.astro` and a `title` in the frontmatter —
+that layout already supplies the `PromptLabel` heading and `proseClasses`.
+`src/pages/open-source.md` is the working example. Don't hand-roll this case.
+
+**A new page, structured:** wrap it in `BaseLayout`, open with a
+`PromptLabel as="h1"`, and add `class="reveal"` to major sections. Compose from
+`Card` / `Badge` rather than writing new container styles. Add the route to
+`siteConfig.nav` if it belongs in the header.
 
 **A new icon:** add the 24x24 path to `src/data/icons.ts`, then use
 `<Icon name="..." />`.

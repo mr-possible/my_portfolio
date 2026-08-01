@@ -137,5 +137,8 @@ html.dark .astro-code span {
   .js .reveal.is-visible {
     opacity: 1 !important;
     transform: none !important;
+    /* Kill the transition too, or the print snapshot can catch a
+       mid-fade opacity instead of the settled value. */
+    transition: none !important;
   }
 }
