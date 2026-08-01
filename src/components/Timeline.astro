@@ -1,0 +1,16 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<ol
+  class:list={[
+    'relative space-y-8 before:absolute before:left-[5px] before:top-2 before:bottom-2 before:w-px before:bg-edge',
+    className,
+  ]}
+>
+  <slot />
+</ol>
