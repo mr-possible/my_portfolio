@@ -12,18 +12,20 @@ interface Props {
       tags: string[];
     };
   };
+  /** Heading level, so the card fits the surrounding page outline. */
+  as?: 'h2' | 'h3';
 }
 
-const { post } = Astro.props;
+const { post, as: Heading = 'h2' } = Astro.props;
 ---
 
 <Card as="article" class="group">
   <a href={`/blog/${post.id}`} class="block">
-    <h2
+    <Heading
       class="font-mono text-lg font-semibold leading-snug mb-2 group-hover:text-accent transition-colors"
     >
       {post.data.title}
-    </h2>
+    </Heading>
   </a>
   <BlogPostMeta pubDate={post.data.pubDate} tags={post.data.tags} />
   <p class="text-sm text-content-muted mt-3">{post.data.description}</p>

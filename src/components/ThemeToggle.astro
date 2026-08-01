@@ -2,13 +2,13 @@
 ---
 
 <button
-  id="theme-toggle"
+  data-theme-toggle
   type="button"
   aria-label="Toggle dark mode"
   class="p-2 rounded-md text-content-muted hover:text-accent hover:bg-surface-raised transition-colors"
 >
   <svg
-    id="sun-icon"
+    data-theme-icon="sun"
     class="w-5 h-5 hidden"
     fill="none"
     viewBox="0 0 24 24"
@@ -22,7 +22,7 @@
     ></path>
   </svg>
   <svg
-    id="moon-icon"
+    data-theme-icon="moon"
     class="w-5 h-5 hidden"
     fill="none"
     viewBox="0 0 24 24"
@@ -38,16 +38,25 @@
 </button>
 
 <script>
+  // The header renders this component twice (desktop nav + mobile bar) and Astro
+  // bundles this script once, so every instance must be wired — an id-based
+  // lookup would bind only the first and leave the mobile button dead.
   function updateIcons() {
     const isDark = document.documentElement.classList.contains('dark');
-    document.getElementById('sun-icon')!.classList.toggle('hidden', !isDark);
-    document.getElementById('moon-icon')!.classList.toggle('hidden', isDark);
+    document
+      .querySelectorAll('[data-theme-icon="sun"]')
+      .forEach((icon) => icon.classList.toggle('hidden', !isDark));
+    document
+      .querySelectorAll('[data-theme-icon="moon"]')
+      .forEach((icon) => icon.classList.toggle('hidden', isDark));
   }
 
-  document.getElementById('theme-toggle')!.addEventListener('click', () => {
-    const isDark = document.documentElement.classList.toggle('dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    updateIcons();
+  document.querySelectorAll('[data-theme-toggle]').forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateIcons();
+    });
   });
 
   updateIcons();

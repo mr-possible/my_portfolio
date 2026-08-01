@@ -10,9 +10,9 @@
     --text-primary: #171717;
     --text-secondary: #5c5c57;
     --border: #e0ded8;
-    --accent: #a15c00;
-    --accent-hover: #7a4600;
-    --accent-muted: rgba(161, 92, 0, 0.1);
+    --accent: #8a4f00;
+    --accent-hover: #6b3c00;
+    --accent-muted: rgba(138, 79, 0, 0.1);
     --accent-secondary: #16a34a;
   }
 
@@ -124,5 +124,18 @@ html.dark .astro-code span {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+}
+
+/*
+ * Scroll-reveal never fires for sections below the fold when printing, so
+ * without this they print blank. Matters most on /about, which is a resume
+ * people save as PDF.
+ */
+@media print {
+  .js .reveal,
+  .js .reveal.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

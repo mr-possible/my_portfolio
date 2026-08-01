@@ -6,16 +6,18 @@ import type { Project } from '../data/projects';
 
 interface Props {
   project: Project;
+  /** Heading level, so the card fits the surrounding page outline. */
+  as?: 'h2' | 'h3';
 }
 
-const { project } = Astro.props;
+const { project, as: Heading = 'h2' } = Astro.props;
 
 const linkClass =
   'inline-flex items-center gap-1.5 font-mono text-xs px-2.5 py-1.5 rounded-md border border-edge text-content-muted hover:text-accent hover:border-accent transition-colors';
 ---
 
 <Card as="article" class="flex flex-col h-full">
-  <h3 class="font-mono text-base font-semibold leading-snug mb-2">{project.title}</h3>
+  <Heading class="font-mono text-base font-semibold leading-snug mb-2">{project.title}</Heading>
   <p class="text-sm text-content-muted mb-4 flex-1">{project.description}</p>
 
   <div class="flex flex-wrap gap-1.5 mb-4">

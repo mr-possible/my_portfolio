@@ -61,7 +61,7 @@ const [firstName, ...restName] = siteConfig.author.split(' ');
         </div>
         <div class="space-y-4">
           {recentPosts.map((post) => (
-            <BlogPostCard post={post} />
+            <BlogPostCard post={post} as="h3" />
           ))}
         </div>
       </section>
