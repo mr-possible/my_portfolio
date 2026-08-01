@@ -34,7 +34,9 @@ const [firstName, ...restName] = siteConfig.author.split(' ');
 
     <p class="font-mono text-sm text-content-muted mt-3">{siteConfig.description}</p>
 
-    <p class="mt-5 max-w-lg text-content-muted cursor-blink">{siteConfig.tagline}</p>
+    <p class="mt-5 max-w-lg text-content-muted">
+      {siteConfig.tagline}<span class="cursor-blink text-accent ml-0.5" aria-hidden="true">▋</span>
+    </p>
 
     <p class="flex items-center gap-2 mt-6 font-mono text-xs text-content-muted">
       <span class="status-pulse inline-block w-2 h-2 rounded-full bg-accent-green" aria-hidden="true"

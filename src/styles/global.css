@@ -46,10 +46,7 @@
 
 @layer utilities {
   /* Blinking block cursor — Home hero */
-  .cursor-blink::after {
-    content: '▋';
-    margin-left: 0.15em;
-    color: var(--accent);
+  .cursor-blink {
     animation: cursor-blink 1s step-end infinite;
   }
 
@@ -117,7 +114,7 @@ html.dark .astro-code span {
     scroll-behavior: auto;
   }
 
-  .cursor-blink::after,
+  .cursor-blink,
   .status-pulse {
     animation: none;
   }
