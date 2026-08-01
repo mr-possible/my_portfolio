@@ -7,6 +7,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <h1 class="text-6xl font-bold text-accent mb-6">404</h1>
     <p class="text-content-muted text-sm">
       <span class="text-accent select-none" aria-hidden="true">$&nbsp;</span>command not found: {
+        /*
+          Known, accepted limitation: this is a static (output: 'static') build,
+          so there is no per-request server to read the visitor's actual
+          mistyped path from. Astro.url.pathname is resolved at build time and
+          always bakes in "/404/" here, not the real requested URL. Reviewed
+          and intentionally left as-is — do not "fix" this without re-reading
+          docs/DESIGN.md "Known limitations".
+        */
         Astro.url.pathname
       }
     </p>
