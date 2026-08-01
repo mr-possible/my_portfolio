@@ -3,24 +3,29 @@
 @tailwind utilities;
 
 @layer base {
+  /* Light theme — active when `.dark` is absent from <html> */
   :root {
-    --bg-primary: #f8fafc;
-    --bg-secondary: #f1f5f9;
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --border: #e2e8f0;
-    --accent: #6366f1;
-    --accent-hover: #4f46e5;
+    --bg-primary: #fafaf9;
+    --bg-secondary: #f1f0ee;
+    --text-primary: #171717;
+    --text-secondary: #5c5c57;
+    --border: #e0ded8;
+    --accent: #a15c00;
+    --accent-hover: #7a4600;
+    --accent-muted: rgba(161, 92, 0, 0.1);
+    --accent-secondary: #16a34a;
   }
 
   .dark {
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --text-primary: #e2e8f0;
-    --text-secondary: #94a3b8;
-    --border: #334155;
-    --accent: #818cf8;
-    --accent-hover: #a5b4fc;
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #141414;
+    --text-primary: #e5e5e0;
+    --text-secondary: #8a8a85;
+    --border: #262622;
+    --accent: #f5a623;
+    --accent-hover: #ffc05c;
+    --accent-muted: rgba(245, 166, 35, 0.12);
+    --accent-secondary: #4ade80;
   }
 
   html {
@@ -29,5 +34,98 @@
 
   body {
     transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  /* Consistent keyboard focus treatment for every interactive element */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  /* Blinking block cursor — Home hero */
+  .cursor-blink::after {
+    content: '▋';
+    margin-left: 0.15em;
+    color: var(--accent);
+    animation: cursor-blink 1s step-end infinite;
+  }
+
+  /* Pulsing availability dot */
+  .status-pulse {
+    animation: status-pulse 2s ease-in-out infinite;
+  }
+
+  /*
+   * Scroll-entrance reveal. Gated behind `.js` so that with JavaScript
+   * disabled the content renders normally instead of staying invisible.
+   */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes cursor-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes status-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.8);
+  }
+}
+
+/*
+ * Shiki emits both light and dark colors as CSS variables (configured with
+ * `defaultColor: false` in astro.config.mjs). Bind them to the active theme.
+ */
+html:not(.dark) .astro-code,
+html:not(.dark) .astro-code span {
+  color: var(--shiki-light) !important;
+  background-color: var(--shiki-light-bg) !important;
+}
+
+html.dark .astro-code,
+html.dark .astro-code span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .cursor-blink::after,
+  .status-pulse {
+    animation: none;
+  }
+
+  .js .reveal,
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
