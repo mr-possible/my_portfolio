@@ -1,4 +1,5 @@
 ---
+import Card from './Card.astro';
 import BlogPostMeta from './BlogPostMeta.astro';
 
 interface Props {
@@ -16,12 +17,14 @@ interface Props {
 const { post } = Astro.props;
 ---
 
-<article class="rounded-lg border border-[var(--border)] p-5 hover:border-[var(--accent)] transition-colors">
-  <a href={`/blog/${post.id}`} class="block group">
-    <h2 class="text-xl font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors">
+<Card as="article" class="group">
+  <a href={`/blog/${post.id}`} class="block">
+    <h2
+      class="font-mono text-lg font-semibold leading-snug mb-2 group-hover:text-accent transition-colors"
+    >
       {post.data.title}
     </h2>
   </a>
   <BlogPostMeta pubDate={post.data.pubDate} tags={post.data.tags} />
-  <p class="text-[var(--text-secondary)] mt-3 text-sm">{post.data.description}</p>
-</article>
+  <p class="text-sm text-content-muted mt-3">{post.data.description}</p>
+</Card>
