@@ -5,6 +5,11 @@ export const siteConfig = {
     'Skilled software engineer with 5+ years of full-time professional experience',
   author: 'Sambhav Dave',
   avatar: '/images/dp.jpg',
+  terminal: {
+    user: 'sambhav',
+    host: 'portfolio',
+    cwd: '~',
+  },
   social: [
     {
       name: 'GitHub',
