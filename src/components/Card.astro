@@ -1,0 +1,19 @@
+---
+interface Props {
+  as?: 'div' | 'article' | 'li';
+  interactive?: boolean;
+  class?: string;
+}
+
+const { as: Tag = 'div', interactive = true, class: className = '' } = Astro.props;
+---
+
+<Tag
+  class:list={[
+    'rounded-md border border-edge bg-surface-raised p-5 transition-all duration-200',
+    interactive && 'hover:border-accent hover:-translate-y-0.5',
+    className,
+  ]}
+>
+  <slot />
+</Tag>

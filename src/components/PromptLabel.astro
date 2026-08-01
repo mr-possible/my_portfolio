@@ -1,0 +1,19 @@
+---
+interface Props {
+  command: string;
+  as?: 'h1' | 'h2' | 'h3';
+  class?: string;
+}
+
+const { command, as: Tag = 'h2', class: className = '' } = Astro.props;
+
+const sizes = {
+  h1: 'text-2xl sm:text-3xl',
+  h2: 'text-xl sm:text-2xl',
+  h3: 'text-lg',
+} as const;
+---
+
+<Tag class:list={['font-mono font-semibold text-content', sizes[Tag], className]}>
+  <span class="text-accent select-none" aria-hidden="true">$&nbsp;</span>{command}
+</Tag>

@@ -1,12 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import PromptLabel from '../components/PromptLabel.astro';
 import { projects } from '../data/projects';
 ---
 
 <BaseLayout title="Projects" description="Projects by Sambhav Dave">
-  <h1 class="text-3xl font-bold mb-8">Projects</h1>
-  <div class="grid gap-6 sm:grid-cols-2">
+  <header class="mb-8">
+    <PromptLabel command="ls ~/projects" as="h1" />
+    <p class="text-content-muted mt-2 text-sm">
+      {projects.length} things I have built, broken, and rebuilt.
+    </p>
+  </header>
+
+  <div class="grid gap-4 sm:grid-cols-2 reveal">
     {projects.map((project) => <ProjectCard project={project} />)}
   </div>
 </BaseLayout>
