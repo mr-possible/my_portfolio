@@ -19,4 +19,13 @@ export const proseClasses = [
   'prose-blockquote:border-l-accent prose-blockquote:text-content-muted',
   'prose-hr:border-edge',
   'prose-img:rounded-md',
+  // Typography ships its own table borders, which ignore the design tokens.
+  // Headers go mono to match the rest of the system; the smaller type keeps
+  // three-column comparison tables readable on a phone without a scroll
+  // wrapper (markdown tables wrap their text rather than overflowing).
+  'prose-table:text-sm',
+  'prose-thead:border-edge',
+  'prose-th:text-content prose-th:font-mono prose-th:font-medium',
+  'prose-tr:border-edge',
+  'prose-td:border-edge prose-td:align-top',
 ].join(' ');
