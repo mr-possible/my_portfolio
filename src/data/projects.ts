@@ -42,7 +42,7 @@ export const projects: Project[] = [
     skills: ['Node.js', 'React', 'WebSockets', 'Solidity', 'Postgres'],
     description:
       'MSc thesis — A full stack decentralised application (dApp) that simulates voting without compromising user data. Uses JWT authentication and Postgres for hashed user storage.',
-    github: 'https://github.com/mr-possible/ipl-dashboard',
+    github: 'https://github.com/mr-possible/voting-web-app',
   },
   {
     title: 'Full Stack Blog Application',
