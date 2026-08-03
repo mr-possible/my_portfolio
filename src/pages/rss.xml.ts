@@ -1,6 +1,7 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 import { siteConfig } from '../data/site';
+import { sortPostsByDate } from '../utils/posts';
 import type { APIContext } from 'astro';
 
 export async function GET(context: APIContext) {
@@ -9,13 +10,11 @@ export async function GET(context: APIContext) {
     title: siteConfig.title,
     description: siteConfig.tagline,
     site: context.site!,
-    items: posts
-      .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-      .map((post) => ({
-        title: post.data.title,
-        pubDate: post.data.pubDate,
-        description: post.data.description,
-        link: `/blog/${post.id}/`,
-      })),
+    items: sortPostsByDate(posts).map((post) => ({
+      title: post.data.title,
+      pubDate: post.data.pubDate,
+      description: post.data.description,
+      link: `/blog/${post.id}/`,
+    })),
   });
 }

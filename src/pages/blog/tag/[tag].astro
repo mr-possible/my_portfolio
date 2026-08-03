@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import BlogPostCard from '../../../components/BlogPostCard.astro';
 import PromptLabel from '../../../components/PromptLabel.astro';
+import { sortPostsByDate } from '../../../utils/posts';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('blog', ({ data }) => {
@@ -14,9 +15,7 @@ export async function getStaticPaths() {
   return allTags.map((tag) => ({
     params: { tag },
     props: {
-      posts: allPosts
-        .filter((post) => post.data.tags.includes(tag))
-        .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
+      posts: sortPostsByDate(allPosts.filter((post) => post.data.tags.includes(tag))),
     },
   }));
 }

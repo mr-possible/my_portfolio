@@ -5,14 +5,13 @@ import SocialLinks from '../components/SocialLinks.astro';
 import BlogPostCard from '../components/BlogPostCard.astro';
 import PromptLabel from '../components/PromptLabel.astro';
 import { siteConfig } from '../data/site';
+import { sortPostsByDate } from '../utils/posts';
 
-const recentPosts = (
+const recentPosts = sortPostsByDate(
   await getCollection('blog', ({ data }) => {
     return import.meta.env.PROD ? data.draft !== true : true;
   })
-)
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 3);
+).slice(0, 3);
 
 const [firstName, ...restName] = siteConfig.author.split(' ');
 ---
