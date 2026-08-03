@@ -35,7 +35,7 @@ export interface ActivityEntry {
 }
 
 export const summary =
-  'I am a passionate and detail-oriented Software Engineer/SDET from India. With a keen interest in ensuring software quality and delivering robust solutions, I bring a unique blend of technical skills and a quality-focused mindset. Please scroll down to know more about me.';
+  "Senior SDET, based in India. Right now I own the test strategy for SeekOut's Outreach platform — TypeScript, Playwright, and service-level tests against NestJS backends. I work spec-first with AI agents in the loop, which has changed how much ground one QA engineer can cover.";
 
 export const education: EducationEntry[] = [
   {
@@ -69,7 +69,7 @@ export const experience: ExperienceEntry[] = [
       'Solely involved as principle QA for in-sprint testing of new features.',
       'Doing code reviews for test automation code ensuring industry standard code quality.',
     ],
-    stack: 'Typescript, Playwright, Azure DevOps, NestJS',
+    stack: 'TypeScript, Playwright, NestJS, Azure DevOps, Claude Code, Playwright MCP',
   },
   {
     role: 'Senior SDET',
@@ -84,7 +84,7 @@ export const experience: ExperienceEntry[] = [
       'Helped the product testing team in writing efficient test cases.',
       'Added user centric locators to frontend for better and reliable automated testing.',
     ],
-    stack: 'Java, Selenide, REST-assured, Docker, AWS',
+    stack: 'Java, Selenide, REST-Assured, Docker, AWS',
   },
   {
     role: 'Student Teaching Assistant',
@@ -159,28 +159,34 @@ export const experience: ExperienceEntry[] = [
 ];
 
 export const skillGroups: SkillGroup[] = [
-  { category: 'Programming', items: ['Java', 'Python'] },
-  { category: 'Backend', items: ['Spring Boot', 'Django', 'NodeJS'] },
-  { category: 'Frontend', items: ['HTML', 'JavaScript', 'React'] },
-  { category: 'CI/CD', items: ['Jenkins', 'Github Actions', 'Docker'] },
   {
-    category: 'Testing',
+    category: 'Testing & Automation',
     items: [
-      'Postman',
-      'TestNG',
-      'Selenium Webdriver',
+      'Playwright',
+      'Selenium WebDriver',
       'Selenide',
       'WebdriverIO',
-      'Playwright',
       'REST-Assured',
+      'Postman',
     ],
   },
-  { category: 'Databases', items: ['MySQL'] },
-  { category: 'Version Control', items: ['Git'] },
   {
-    category: 'Tools/Cloud',
-    items: ['Apache Maven', 'Poetry', 'MS Azure DevOps', 'AWS (not an expert)'],
+    category: 'AI Tooling',
+    items: [
+      'Claude Code',
+      'Playwright MCP',
+      'MCP',
+      'AI-assisted test generation',
+      'Spec-driven development',
+    ],
   },
+  { category: 'Languages', items: ['TypeScript', 'Java', 'Python', 'JavaScript'] },
+  { category: 'Frameworks', items: ['NestJS', 'Spring Boot', 'Django', 'Node.js', 'React'] },
+  {
+    category: 'CI/CD & Cloud',
+    items: ['Azure DevOps', 'Jenkins', 'GitHub Actions', 'Docker', 'AWS'],
+  },
+  { category: 'Build & Data', items: ['Git', 'Apache Maven', 'Poetry', 'MySQL'] },
 ];
 
 export const misc: { label: string; value: string }[] = [

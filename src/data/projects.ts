@@ -9,7 +9,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: 'Single Responsibility Principle in Test Automation',
-    skills: ['Java17', 'Selenium Webdriver', 'Design Patterns'],
+    skills: ['Java 17', 'Selenium WebDriver', 'Design Patterns'],
     description:
       'A project that demonstrates the motive behind single responsibility principle and how it can be incorporated in test automation space.',
     github:
@@ -18,7 +18,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Selenium Framework with Disposable Selenium Grid using Docker',
-    skills: ['Java 17', 'Selenium Webdriver', 'Selenium Grid', 'Docker', 'Jenkins', 'AWS'],
+    skills: ['Java 17', 'Selenium WebDriver', 'Selenium Grid', 'Docker', 'Jenkins', 'AWS'],
     description:
       'A project that demonstrates how dockerised selenium grid can help fasten the testing process and avoid resource constraints. CI is implemented using Jenkins and AWS.',
     github: 'https://github.com/mr-possible/selenium-with-docker',
@@ -34,12 +34,12 @@ export const projects: Project[] = [
     title: 'IPL Match History Full Stack Application',
     skills: ['Java 17', 'Spring', 'React'],
     description:
-      'A full stack application that shows IPL match history in a user-intuitive manner using ReactJS. It ingests data from a CSV file using Spring Batch mechanism.',
+      'A full stack application that shows IPL match history in a user-intuitive manner using React. It ingests data from a CSV file using Spring Batch mechanism.',
     github: 'https://github.com/mr-possible/ipl-dashboard',
   },
   {
     title: 'Secure Voting Application in Ethereum and Smart Contracts',
-    skills: ['NodeJS', 'ReactJS', 'Websockets', 'Solidity', 'Postgres'],
+    skills: ['Node.js', 'React', 'WebSockets', 'Solidity', 'Postgres'],
     description:
       'MSc thesis — A full stack decentralised application (dApp) that simulates voting without compromising user data. Uses JWT authentication and Postgres for hashed user storage.',
     github: 'https://github.com/mr-possible/ipl-dashboard',
