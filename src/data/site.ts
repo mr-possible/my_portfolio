@@ -60,3 +60,13 @@ export const siteConfig = {
     { name: 'Blog', path: '/blog' },
   ],
 } as const;
+
+/**
+ * Handles are stored above as full profile URLs, but Twitter's meta tags want
+ * `@name`. Derived rather than duplicated so the two can't drift.
+ */
+export function twitterHandle(): string | undefined {
+  const url = siteConfig.social.find((s) => s.icon === 'twitter')?.url;
+  const name = url?.split('/').filter(Boolean).pop();
+  return name ? `@${name}` : undefined;
+}

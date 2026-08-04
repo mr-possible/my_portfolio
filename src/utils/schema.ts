@@ -16,13 +16,6 @@ const abs = (path: string) => new URL(path, siteConfig.url).href;
 const PERSON_ID = abs('/#person');
 const SITE_ID = abs('/#website');
 
-/** Handles live in `social` as profile URLs; Twitter meta tags want `@name`. */
-export function twitterHandle(): string | undefined {
-  const url = siteConfig.social.find((s) => s.icon === 'twitter')?.url;
-  const name = url?.split('/').filter(Boolean).pop();
-  return name ? `@${name}` : undefined;
-}
-
 /**
  * The entity signal for name searches. `sameAs` is built from siteConfig.social
  * rather than restated, so adding a profile there propagates here.
