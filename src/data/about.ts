@@ -35,7 +35,7 @@ export interface ActivityEntry {
 }
 
 export const summary =
-  "Senior SDET, based in India. Right now I own the test strategy for SeekOut's Outreach platform — TypeScript, Playwright, and service-level tests against NestJS backends. I work spec-first with AI agents in the loop, which has changed how much ground one QA engineer can cover.";
+  "I'm the SDET you hire when testing needs to exist and doesn't yet. Seven years across core banking, pharmacovigilance, and recruiting SaaS — three times as the first engineer to put real automation on a team. Right now I own test strategy for SeekOut's B2B/B2C SaaS products in TypeScript and Playwright, working spec-first with AI agents so one QA engineer covers what used to need a team.";
 
 export const education: EducationEntry[] = [
   {
@@ -192,7 +192,7 @@ export const skillGroups: SkillGroup[] = [
 export const misc: { label: string; value: string }[] = [
   { label: 'Languages', value: 'English (Business-fluent), Hindi (Mother-tongue)' },
   { label: 'Marital Status', value: 'Single' },
-  { label: 'Current Location', value: 'Pune, Maharashtra, India' },
+  { label: 'Current Location', value: 'Bangalore, Karnataka, India' },
 ];
 
 export const activities: ActivityEntry[] = [

@@ -2,7 +2,7 @@ export const siteConfig = {
   title: 'Sambhav Dave',
   description: 'Software Engineer | SDET',
   tagline:
-    'Skilled software engineer with 5+ years of full-time professional experience',
+    "Seven years making other people's software prove it works — test strategy, automation, and the occasional blog post",
   author: 'Sambhav Dave',
   avatar: '/images/dp.jpg',
   terminal: {
