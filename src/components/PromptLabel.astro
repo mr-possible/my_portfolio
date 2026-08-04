@@ -1,19 +1,32 @@
 ---
+/**
+ * A terminal-prompt label (`$ whoami`).
+ *
+ * Deliberately cannot render an <h1>. As a page's top heading the command text
+ * is useless — it carries no keywords for search engines, and a screen reader
+ * announces "dollar sign whoami" as the page title. Pages that want this as
+ * their visible top line pass `heading` to BaseLayout instead, which emits a
+ * real sr-only <h1>; `as="page"` gives the same type size without the heading
+ * semantics.
+ */
 interface Props {
   command: string;
-  as?: 'h1' | 'h2' | 'h3';
+  as?: 'page' | 'h2' | 'h3';
   class?: string;
 }
 
 const { command, as: Tag = 'h2', class: className = '' } = Astro.props;
 
 const sizes = {
-  h1: 'text-2xl sm:text-3xl',
+  page: 'text-2xl sm:text-3xl',
   h2: 'text-xl sm:text-2xl',
   h3: 'text-lg',
 } as const;
+
+/** `page` is a visual size, not a heading level, so it renders as a div. */
+const Element = Tag === 'page' ? 'div' : Tag;
 ---
 
-<Tag class:list={['font-mono font-semibold text-content', sizes[Tag], className]}>
+<Element class:list={['font-mono font-semibold text-content', sizes[Tag], className]}>
   <span class="text-accent select-none" aria-hidden="true">$&nbsp;</span>{command}
-</Tag>
+</Element>

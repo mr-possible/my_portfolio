@@ -2,7 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Page Not Found">
+<BaseLayout
+  title="Page Not Found"
+  description="That path doesn't exist on sambhav.blog. Head back home."
+  noindex
+>
   <section class="flex flex-col items-start py-20 font-mono">
     <h1 class="text-6xl font-bold text-accent mb-6">404</h1>
     <p class="text-content-muted text-sm">

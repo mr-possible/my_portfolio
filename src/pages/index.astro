@@ -6,6 +6,7 @@ import BlogPostCard from '../components/BlogPostCard.astro';
 import PromptLabel from '../components/PromptLabel.astro';
 import { siteConfig } from '../data/site';
 import { sortPostsByDate } from '../utils/posts';
+import { personSchema, websiteSchema } from '../utils/schema';
 
 const recentPosts = sortPostsByDate(
   await getCollection('blog', ({ data }) => {
@@ -16,14 +17,16 @@ const recentPosts = sortPostsByDate(
 const [firstName, ...restName] = siteConfig.author.split(' ');
 ---
 
-<BaseLayout>
+<BaseLayout schema={[personSchema(), websiteSchema()]}>
   <section class="flex flex-col items-center text-center pb-16">
     <img
       src={siteConfig.avatar}
-      alt={siteConfig.author}
+      alt={`${siteConfig.author} — ${siteConfig.description}`}
       class="w-28 h-28 rounded-md object-cover mb-6 border border-edge"
       width="112"
       height="112"
+      decoding="async"
+      fetchpriority="high"
     />
 
     <h1 class="font-mono text-3xl sm:text-4xl font-bold tracking-tight">

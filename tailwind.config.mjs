@@ -4,9 +4,18 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      // "* Variable" are the family names @fontsource-variable registers; the
+      // non-variable names follow as a fallback for anyone who has the font
+      // installed locally, then the system stack.
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'ui-monospace', 'Menlo', 'monospace'],
+        sans: ['"Inter Variable"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: [
+          '"JetBrains Mono Variable"',
+          '"JetBrains Mono"',
+          'ui-monospace',
+          'Menlo',
+          'monospace',
+        ],
       },
       // Semantic color roles backed by the CSS custom properties in
       // global.css. Because the values are var()-based, Tailwind opacity

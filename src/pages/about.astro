@@ -14,14 +14,17 @@ import {
   activities,
   hobbies,
 } from '../data/about';
+import { personSchema } from '../utils/schema';
 ---
 
 <BaseLayout
-  title="About Me"
+  title="About Sambhav Dave"
   description="Learn more about Sambhav Dave - Senior SDET with 7 years of experience in test strategy and automation"
+  heading="About Sambhav Dave"
+  schema={personSchema()}
 >
   <header class="mb-10">
-    <PromptLabel command="whoami" as="h1" />
+    <PromptLabel command="whoami" as="page" />
     <p class="mt-4 text-content-muted leading-relaxed">{summary}</p>
   </header>
 

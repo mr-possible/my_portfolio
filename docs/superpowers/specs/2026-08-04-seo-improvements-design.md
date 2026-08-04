@@ -1,7 +1,7 @@
 # SEO Improvements — Design Spec
 
 Date: 2026-08-04
-Status: Approved (design phase) — pending implementation plan
+Status: Implemented
 
 ## Goal
 
@@ -270,6 +270,74 @@ findings above were only fully visible post-build:
 - No two pages share a meta description.
 - `robots.txt` served, sitemap URL resolves.
 - Avatar payload under 20 KB; no Google Fonts request in the built HTML.
+
+## Implementation notes
+
+Where the built result diverged from the design above. Recorded because each
+was forced by something the design assumed wrongly.
+
+**Three devDependencies, not two.** The design expected `@resvg/resvg-js` plus
+`@fontsource-variable/jetbrains-mono` to suffice, with Phase 4 sharing the
+latter. Two discoveries changed that:
+
+- resvg cannot decode woff2, and `@fontsource` ships nothing else — so
+  `wawoff2` was added to decompress to TTF in memory.
+- resvg pins a variable font to its default instance and silently ignores
+  `font-weight` — rendering at 700 against the variable font is pixel-identical
+  to 400. The *static* `@fontsource/jetbrains-mono` was added for a real bold on
+  the card. The site itself still uses the variable package, which is smaller.
+
+Also worth knowing: resvg's `fontBuffers` option is silently ignored. Passing
+buffers renders in a fallback sans-serif with no error; only `fontFiles`
+(paths) works, hence the temp-file step in `make-og-image.mjs`.
+
+**`PromptLabel` gained `as="page"` rather than only losing `'h1'`.** Dropping
+`h1` from the union left no way to ask for the largest type size. `as="page"`
+provides it and renders a `<div>` — a visual size with no heading semantics.
+Verified: computed font-size and margins are unchanged from the old `h1`, so
+the swap is visually a no-op (Tailwind preflight already zeroed heading
+margins).
+
+**`og:image:width` / `height` are conditional.** Emitted only for the generated
+default card, whose dimensions are known. A post supplying its own hero image
+can be any shape, and declaring unmeasured dimensions is worse than declaring
+none, since scrapers use them to reserve layout.
+
+**`collectionPageSchema()` was added**, beyond the four builders specced. The
+blog index and tag archives are lists of posts, not articles; `CollectionPage`
+with a nested `ItemList` says so, where `BlogPosting` would have misdescribed
+them.
+
+**The avatar became a generated asset.** `public/images/dp.jpg` moved to
+`assets/dp-source.jpg` and `npm run avatar` emits `public/images/dp.webp`,
+matching the existing convention that `assets/` holds sources and `public/`
+holds generated output. 1221 KB → 17 KB.
+
+**Blog hero CLS is handled with `aspect-ratio`, not `width`/`height`.** The
+frontmatter `image` is a plain path, so intrinsic dimensions aren't known at
+build time. A fixed `1.91/1` box with `object-cover` reserves the space
+instead. No post currently sets `image`, so this is preventative.
+
+**Two things fixed opportunistically:** the 404 page got its own description
+(it was the last page sharing the site tagline, though `noindex` made it
+harmless), and the YouTube URL in `siteConfig.social` lost its `?si=` share
+token, which had been leaking into `sameAs`.
+
+### Verification results
+
+Against `dist/` after build:
+
+- Exactly one `<h1>` on all 8 page types checked, each with real text.
+- 28 JSON-LD blocks, 0 invalid, `@type` present on every one.
+- Meta descriptions unique across all 18 pages.
+- Blog post emits `og:type=article` with `article:published_time`; homepage
+  emits `website` with no `article:*`.
+- Zero references to `fonts.googleapis.com` / `fonts.gstatic.com` and zero
+  preconnects in the built output; 12 self-hosted woff2 subsets shipped.
+- `document.fonts` confirms both variable families load and are used — the
+  self-hosting didn't silently fall back.
+- Avatar serves at 224×224 WebP, 17 KB.
+- `robots.txt` present; sitemap lists 17 URLs and excludes `/404`.
 
 ## Out of scope
 

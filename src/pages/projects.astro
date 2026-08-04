@@ -5,9 +5,13 @@ import PromptLabel from '../components/PromptLabel.astro';
 import { projects } from '../data/projects';
 ---
 
-<BaseLayout title="Projects" description="Projects by Sambhav Dave">
+<BaseLayout
+  title="Projects"
+  description={`${projects.length} things Sambhav Dave has built, broken, and rebuilt — test automation, tooling, and side projects.`}
+  heading="Projects by Sambhav Dave"
+>
   <header class="mb-8">
-    <PromptLabel command="ls ~/projects" as="h1" />
+    <PromptLabel command="ls ~/projects" as="page" />
     <p class="text-content-muted mt-2 text-sm">
       {projects.length} things I have built, broken, and rebuilt.
     </p>

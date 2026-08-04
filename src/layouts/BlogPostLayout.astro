@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import BlogPostMeta from '../components/BlogPostMeta.astro';
 import { proseClasses } from '../styles/prose';
+import { blogPostingSchema, breadcrumbSchema } from '../utils/schema';
 
 interface Props {
   title: string;
@@ -14,9 +15,27 @@ interface Props {
 }
 
 const { title, description, pubDate, updatedDate, tags, image, imageAlt } = Astro.props;
+
+const pathname = Astro.url.pathname;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+  title={title}
+  description={description}
+  ogType="article"
+  ogImage={image}
+  ogImageAlt={imageAlt || title}
+  publishedTime={pubDate}
+  modifiedTime={updatedDate}
+  schema={[
+    blogPostingSchema({ title, description, pubDate, updatedDate, tags, image }, pathname),
+    breadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'Blog', url: '/blog/' },
+      { name: title, url: pathname },
+    ]),
+  ]}
+>
   <article>
     <header class="mb-8 pb-6 border-b border-edge">
       <h1 class="font-mono text-2xl sm:text-3xl font-bold tracking-tight mb-4 leading-tight">
@@ -37,7 +56,22 @@ const { title, description, pubDate, updatedDate, tags, image, imageAlt } = Astr
       }
     </header>
 
-    {image && <img src={image} alt={imageAlt || ''} class="rounded-md mb-8 w-full" />}
+    {
+      /*
+       * `image` is a plain path from frontmatter, so its intrinsic dimensions
+       * aren't known at build time and width/height attributes can't be set.
+       * A fixed aspect-ratio reserves the space instead, which is what stops
+       * the layout shift; object-cover crops to fit rather than distorting.
+       */
+      image && (
+        <img
+          src={image}
+          alt={imageAlt || ''}
+          class="rounded-md mb-8 w-full aspect-[1.91/1] object-cover bg-surface-raised"
+          decoding="async"
+        />
+      )
+    }
 
     <div class={proseClasses}>
       <slot />

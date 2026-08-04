@@ -13,9 +13,13 @@ interface Props {
 const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout title={frontmatter.title} description={frontmatter.description}>
+<BaseLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  heading={frontmatter.title}
+>
   <header class="mb-8">
-    <PromptLabel command={frontmatter.title} as="h1" />
+    <PromptLabel command={frontmatter.title} as="page" />
   </header>
   <article class={proseClasses}>
     <slot />
